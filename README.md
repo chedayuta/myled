@@ -4,9 +4,9 @@
 使用モデル:Raspberry Pi 3 Model B+  
 2つのLEDの点灯、消灯が行える。  
 
+## Demo
+[YouTube](https://www.youtube.com/watch?v=C3YOIyL8mGE)  
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/C3YOIyL8mGE/maxresdefault.jpg)](https://www.youtube.com/watch?v=C3YOIyL8mGE)  
-[デモ](https://www.youtube.com/watch?v=C3YOIyL8mGE)
-
 
 ## How to use
 0～3の値を書き込むと以下の通りGPIOの動作が切り替わる。  
@@ -16,6 +16,8 @@
 3 : GPIO 24 ON,  GPIO 25 ON  
 
     # セットアップ
+    git clone https://github.com/itohiya/myled.git
+    cd myled
     make
     sudo insmod myled.ko
     sudo chmod 666 /dev/myled0
