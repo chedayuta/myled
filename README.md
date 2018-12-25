@@ -14,7 +14,14 @@ GPIO24が左の黄色いLED、GPIO25が右の赤いLEDとなっている。
 2 : GPIO 24 OFF, GPIO 25 ON  
 3 : GPIO 24 ON,  GPIO 25 ON  
 
+    # セットアップ
     make
     sudo insmod myled.ko
     sudo chmod 666 /dev/myled0
+
+    # GPIO24を点灯
     echo 1 > /dev/myled0
+    # GPIO25を点灯
+    echo 2 > /dev/myled0
+    # GPIO24,25を点灯
+    echo 3 > /dev/myled0
