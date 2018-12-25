@@ -1,4 +1,4 @@
-# Device driver for Raspberry Pi 3 Model B+
+# Device driver for Raspberry Pi 
 ロボットシステム学 課題1
 
 ## How to use
