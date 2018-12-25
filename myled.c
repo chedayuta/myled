@@ -5,7 +5,7 @@
 #include <linux/uaccess.h>
 #include <linux/io.h>
 
-MODULE_AUTHOR("Ryuichi Ueda");
+MODULE_AUTHOR("Atsuhito Itohiya");
 MODULE_DESCRIPTION("driver for LED control");
 MODULE_LICENSE("GPL");
 MODULE_VERSION("0.1");
@@ -50,7 +50,10 @@ static int __init init_mod(void)
 	int retval;
 
 	gpio_base = ioremap_nocache(0x3f200000, 0xA0); //0x3f..:base address, 0xA0: region to map
-	gpio_base[2] = 0xFFFC9FFF; //11111111111111001001111111111111
+
+	//const u32 mask = ~0x6000; //001001111111111111
+	//gpio_base[2] = gpio_base[2] & mask; //11111111111111001001111111111111
+	gpio_base[2] = 0xFFFC9FFF; 
 	
 	retval =  alloc_chrdev_region(&dev, 0, 1, "myled");
 	if(retval < 0){
