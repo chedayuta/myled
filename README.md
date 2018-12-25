@@ -5,8 +5,8 @@
 2つのLEDの点灯、消灯が行える。  
 
 ## Demo
-[YouTube](https://www.youtube.com/watch?v=C3YOIyL8mGE)  
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/C3YOIyL8mGE/maxresdefault.jpg)](https://www.youtube.com/watch?v=C3YOIyL8mGE)  
+[YouTube](https://www.youtube.com/watch?v=C3YOIyL8mGE)  
 
 ## How to use
 0～3の値を書き込むと以下の通りGPIOの動作が切り替わる。  
