@@ -50,10 +50,11 @@ static int __init init_mod(void)
 	int retval;
 
 	gpio_base = ioremap_nocache(0x3f200000, 0xA0); //0x3f..:base address, 0xA0: region to map
-
-	//const u32 mask = ~0x6000; //001001111111111111
-	//gpio_base[2] = gpio_base[2] & mask; //11111111111111001001111111111111
-	gpio_base[2] = 0xFFFC9FFF; 
+	const u32 index = 2;//GPFSEL2
+	const u32 shift12 = 12;//12bit
+	const u32 shift15 = 15;//15bit
+	const u32 mask = ~(0x3f << shift12) ;//11111111111111000111111111111111
+	gpio_base[index] = (gpio_base[index] & mask) | (0x1 << shift12) | (0x1 << shift15);//001: output flag
 	
 	retval =  alloc_chrdev_region(&dev, 0, 1, "myled");
 	if(retval < 0){
