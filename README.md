@@ -2,9 +2,9 @@
 ロボットシステム学 課題1
 Raspberry Pi用に作成したデバイスドライバを用いて2つのLEDの点灯、消灯を行う。
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/C3YOIyL8mGE/maxresdefault.jpg)](hgttps://www.youtube.com/watch?v=C3YOIyL8mGE)
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/C3YOIyL8mGE/maxresdefault.jpg)](https://www.youtube.com/watch?v=C3YOIyL8mGE)  
+[デモ](https://www.youtube.com/watch?v=C3YOIyL8mGE)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/C3YOIyL8mGE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## How to use
 
